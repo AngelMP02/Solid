@@ -1,0 +1,18 @@
+@startuml
+class Matriz {
+  - elementos: List[List[int]]
+  + __init__(elementos: List[List[int]])
+  + obtener_elementos(): List[List[int]]
+}
+
+class MatrizPrinter {
+  + imprimir(matriz: Matriz)
+}
+
+class MatrizTranspuesta {
+  + calcular_transpuesta(matriz: Matriz): Matriz
+}
+
+Matriz -- MatrizPrinter: Usa
+Matriz -- MatrizTranspuesta: Usa
+@enduml
